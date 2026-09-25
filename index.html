@@ -29,14 +29,14 @@
         nav a {
             color: #f8fafc;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 12px;
             font-weight: 600;
             font-size: 0.95rem;
         }
         nav a:hover {
             color: #fbbf24;
         }
-        /* Hero Section (Page 1) */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
             color: white;
@@ -48,7 +48,7 @@
             margin: 0 auto;
         }
         .hero h1 {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
             line-height: 1.3;
             margin-bottom: 1.5rem;
             color: #ffffff;
@@ -71,7 +71,7 @@
             display: inline-block;
             background-color: #fbbf24;
             color: #0f172a;
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 1.8rem;
             border-radius: 6px;
             font-weight: bold;
             text-decoration: none;
@@ -86,13 +86,13 @@
         }
         /* Layout Containers */
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
         section {
             scroll-margin-top: 70px;
-            margin-bottom: 2rem;
+            margin-bottom: 3.5rem;
         }
         section h2 {
             font-size: 1.8rem;
@@ -101,7 +101,7 @@
             border-bottom: 3px solid #e2e8f0;
             padding-bottom: 0.5rem;
         }
-        /* Qualifications Cards (Page 2) */
+        /* Qualifications Cards */
         .card {
             background: white;
             padding: 2rem;
@@ -125,11 +125,18 @@
             font-weight: bold;
             margin-bottom: 1rem;
         }
-        /* Services Lists (Page 3) */
+        /* Services Layout */
         .services-grid {
             display: grid;
+            grid-template-columns: 1fr;
             gap: 1.5rem;
             margin-bottom: 3rem;
+        }
+        @media(min-width: 768px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+            .contact-flex { display: flex; gap: 2rem; align-items: start; }
+            .contact-info-panel { flex: 1; margin-bottom: 0; }
+            form { flex: 1.3; }
         }
         .service-item {
             background: #ffffff;
@@ -143,12 +150,45 @@
             margin-bottom: 0.5rem;
             font-size: 1.15rem;
         }
-        /* Contact Form Formats */
+        /* Contact Block Styling */
+        .contact-info-panel {
+            background: #0f172a;
+            color: #f8fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .contact-info-panel h3 {
+            color: #fbbf24;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+        .info-block {
+            margin-bottom: 1.5rem;
+        }
+        .info-block p.label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            margin-bottom: 0.2rem;
+        }
+        .info-block p.value {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .info-block a {
+            color: #fbbf24;
+            text-decoration: none;
+        }
+        /* Contact Form */
         form {
             background: white;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            width: 100%;
         }
         .form-group {
             margin-bottom: 1.25rem;
@@ -212,7 +252,7 @@
     <!-- Page 1: Home Section -->
     <header class="hero" id="home">
         <div class="hero-content">
-            <h1>OLIVE INTEGRATED HOME CARE</h1>
+            <h1></h1>
             <p class="subtitle">Combining clinical nursing depth, hands-on caregiving, and healthcare systems expertise to provide elite, stress-free care for your loved one.</p>
             <p class="intro">Families navigating complex health landscapes deserve more than basic assistance—they need an advocate who understands the clinical, practical, and administrative layers of medicine. As a highly trained care provider holding a degree in Health System Management alongside active CNA and Certified Medication Technician credentials, I bridge the gap between complex hospital networks and daily home wellness.</p>
             <a href="#about" class="cta-btn">View My Qualifications</a>
@@ -251,24 +291,3 @@
             <h2>Services & Expertise</h2>
             
             <div class="services-grid">
-                <div class="service-item">
-                    <h4>Medication Management</h4>
-                    <p>Legally authorized, precise verification and administration of prescription schedules to entirely prevent drug conflicts or skipped doses.</p>
-                </div>
-                <div class="service-item">
-                    <h4>Clinical Daily Care</h4>
-                    <p>Specialized assistance with daily activities, post-operative transition support, and specialized nutritional guidance.</p>
-                </div>
-                <div class="service-item">
-                    <h4>Care Coordination</h4>
-                    <p>Acting as the primary liaison between pharmacies, specialty doctors, and families to streamline medical updates.</p>
-                </div>
-            </div>
-
-            <h2>Contact for Consultation</h2>
-            <!-- Formspree tracking can link here to send emails directly to you -->
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
-                </div>
