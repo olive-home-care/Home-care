@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olive Integrated Home Care</title>
+    <title>Private Care & Health Management</title>
     <style>
         * {
             box-sizing: border-box;
@@ -19,44 +19,14 @@
         /* Top Navigation Bar */
         nav {
             background-color: #0f172a;
-            padding: 1rem 2rem;
+            padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
+            text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        /* Pure CSS Badge Logo */
-        .css-logo {
-            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-            color: #0f172a;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 1.1rem;
-            letter-spacing: -0.5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-        }
-        .nav-brand span {
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: 0.5px;
-        }
-        .nav-links a {
+        nav a {
             color: #f8fafc;
             text-decoration: none;
             margin: 0 12px;
@@ -65,11 +35,6 @@
         }
         nav a:hover {
             color: #fbbf24;
-        }
-        @media(min-width: 768px) {
-            nav {
-                flex-direction: row;
-            }
         }
         /* Hero Section */
         .hero {
@@ -83,8 +48,7 @@
             margin: 0 auto;
         }
         .hero h1 {
-            font-size: 2.5rem;
-            letter-spacing: 0.5px;
+            font-size: 2.1rem;
             line-height: 1.3;
             margin-bottom: 1.5rem;
             color: #ffffff;
@@ -168,6 +132,12 @@
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
+        @media(min-width: 768px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+            .contact-flex { display: flex; gap: 2rem; align-items: start; }
+            .contact-info-panel { flex: 1; margin-bottom: 0; }
+            form { flex: 1.3; }
+        }
         .service-item {
             background: #ffffff;
             padding: 1.5rem;
@@ -179,12 +149,6 @@
             color: #0f172a;
             margin-bottom: 0.5rem;
             font-size: 1.15rem;
-        }
-        @media(min-width: 768px) {
-            .services-grid { grid-template-columns: repeat(3, 1fr); }
-            .contact-flex { display: flex; gap: 2rem; align-items: start; }
-            .contact-info-panel { flex: 1; margin-bottom: 0; }
-            form { flex: 1.3; }
         }
         /* Contact Block Styling */
         .contact-info-panel {
@@ -217,9 +181,6 @@
         .info-block a {
             color: #fbbf24;
             text-decoration: none;
-        }
-        .info-block a:hover {
-            text-decoration: underline;
         }
         /* Contact Form */
         form {
@@ -281,23 +242,17 @@
 </head>
 <body>
 
-    <!-- Navigation with Pure CSS Logo Badge -->
+    <!-- Simple Navigation -->
     <nav>
-        <div class="nav-brand">
-            <div class="css-logo">OI</div>
-            <span>OLIVE INTEGRATED HOME CARE</span>
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">Qualifications</a>
-            <a href="#services">Services & Contact</a>
-        </div>
+        <a href="#home">Home</a>
+        <a href="#about">Qualifications</a>
+        <a href="#services">Services & Contact</a>
     </nav>
 
     <!-- Page 1: Home Section -->
     <header class="hero" id="home">
         <div class="hero-content">
-            <h1>OLIVE INTEGRATED HOME CARE</h1>
+            <h1>High-Level Private Care & Comprehensive Health Management</h1>
             <p class="subtitle">Combining clinical nursing depth, hands-on caregiving, and healthcare systems expertise to provide elite, stress-free care for your loved one.</p>
             <p class="intro">Families navigating complex health landscapes deserve more than basic assistance—they need an advocate who understands the clinical, practical, and administrative layers of medicine. As a highly trained care provider holding a degree in Health System Management alongside active CNA and Certified Medication Technician credentials, I bridge the gap between complex hospital networks and daily home wellness.</p>
             <a href="#about" class="cta-btn">View My Qualifications</a>
@@ -314,3 +269,25 @@
             <div class="card">
                 <span class="badge">Academic & Administrative Foundation</span>
                 <h3>Bachelor of Science in Health System Management (BSHSM)</h3>
+                <p>This training equips me to manage healthcare navigation, interface professionally with insurance networks, coordinate with physician teams, and act as a fierce advocate for patients within complex medical systems.</p>
+            </div>
+
+            <div class="card" style="border-top-color: #6366f1;">
+                <span class="badge">Deep Clinical Nursing Education</span>
+                <h3>Comprehensive Nursing Curriculum</h3>
+                <p>Completed 70+ rigorous credits of foundational nursing school curriculum. Mastered advanced comprehension of Anatomy & Physiology, Microbiology, Chemistry, and Nutrition.</p>
+            </div>
+
+            <div class="card" style="border-top-color: #fbbf24;">
+                <span class="badge">Hands-On Experience & Certifications</span>
+                <h3>Hospital Floor Experience & Active Credentials</h3>
+                <p>Extensive clinical rotations across Med-Surg (Medical-Surgical) and Mental Health units, handling diverse, high-acuity patient profiles.</p>
+                <p style="margin-top: 0.5rem; font-weight: bold; color: #1e3a8a;">Credentials: Certified Nursing Assistant (CNA) & Certified Medication Technician (Med Tech). Expert in safe, verified medication administration and oversight.</p>
+            </div>
+        </section>
+
+        <!-- Page 3: Services & Contact -->
+        <section id="services">
+            <h2>Services & Expertise</h2>
+            
+            <div class="services-grid">
